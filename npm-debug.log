@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'BOOTSRAP' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose cache add [ 'BOOTSRAP', null ]
+5 verbose cache add name=undefined spec="BOOTSRAP" args=["BOOTSRAP",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'BOOTSRAP',
+6 verbose parsed url   path: 'BOOTSRAP',
+6 verbose parsed url   href: 'BOOTSRAP' }
+7 silly lockFile 8a00ba2f-BOOTSRAP BOOTSRAP
+8 verbose lock BOOTSRAP C:\Users\dev2\AppData\Roaming\npm-cache\8a00ba2f-BOOTSRAP.lock
+9 silly lockFile 8a00ba2f-BOOTSRAP BOOTSRAP
+10 silly lockFile 8a00ba2f-BOOTSRAP BOOTSRAP
+11 verbose addNamed [ 'BOOTSRAP', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile fbc9f774-BOOTSRAP BOOTSRAP@
+14 verbose lock BOOTSRAP@ C:\Users\dev2\AppData\Roaming\npm-cache\fbc9f774-BOOTSRAP.lock
+15 silly addNameRange { name: 'BOOTSRAP', range: '*', hasData: false }
+16 verbose request where is /BOOTSRAP
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 18ea437c36e1ef28
+19 verbose url raw /BOOTSRAP
+20 verbose url resolving [ 'https://registry.npmjs.org/', './BOOTSRAP' ]
+21 verbose url resolved https://registry.npmjs.org/BOOTSRAP
+22 verbose request where is https://registry.npmjs.org/BOOTSRAP
+23 info trying registry request attempt 1 at 15:42:03
+24 http GET https://registry.npmjs.org/BOOTSRAP
+25 http 404 https://registry.npmjs.org/BOOTSRAP
+26 silly registry.get cb [ 404,
+26 silly registry.get   { 'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=0',
+26 silly registry.get     'content-length': '2',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Thu, 10 Sep 2015 10:12:06 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-fra1245-FRA',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1441879926.795076,VS0,VE110' } ]
+27 silly lockFile fbc9f774-BOOTSRAP BOOTSRAP@
+28 silly lockFile fbc9f774-BOOTSRAP BOOTSRAP@
+29 error 404 Not Found
+29 error 404
+29 error 404 'BOOTSRAP' is not in the npm registry.
+29 error 404 You should bug the author to publish it
+29 error 404
+29 error 404 Note that you can also install from a
+29 error 404 tarball, folder, or http url, or git url.
+30 error System Windows_NT 6.1.7600
+31 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "BOOTSRAP"
+32 error cwd d:\Server\htdocs\test-RNDA
+33 error node -v v0.10.35
+34 error npm -v 1.4.28
+35 error code E404
+36 verbose exit [ 1, true ]
