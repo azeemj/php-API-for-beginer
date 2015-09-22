@@ -1,4 +1,4 @@
-Next I’ll create the client page that will be using the API.
+
 <html>
  <body>
 
@@ -29,10 +29,11 @@ else // else take the app list
 {
  
   ?>
+     App list 
     <ul>
     <?php foreach ($app_list as $app): ?>
       <li>
-        <a href=<?php echo "http://{Your Website}/REST_Client.php?action=get_app&id=" . $app["id"]  ?> alt=<?php echo "app_" . $app_["id"] ?>><?php echo $app["name"] ?></a>
+        <a href=<?php echo "http://localhost/test-RNDA/api/get_app/".$app["id"]  ?> alt=<?php echo "app_" . $app["id"] ?>><?php echo $app["name"] ?></a>
     </li>
     <?php endforeach; ?>
     </ul>

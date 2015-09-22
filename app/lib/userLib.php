@@ -15,6 +15,7 @@ class userLib{
         
 static  function get_app_by_id($id)
 {
+   
   $app_info = array();
 
   // normally this info would be pulled from a database.
