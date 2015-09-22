@@ -43,6 +43,7 @@ if ( in_array($action, $possible_url))
     }
     
     echo (json_encode($value));
+   exit;
 }
 
 //return JSON array

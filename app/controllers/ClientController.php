@@ -13,21 +13,34 @@ class ClientController extends BaseController {
     }
 
     function appList() {
-        
+
         $app_list = file_get_contents('http://localhost/test-RNDA/api/get_app_list/0');
-       
+
         $app_list = json_decode($app_list, true);
-        
-        return View::make('testapi')->with('app_list',$app_list)->with('list',1);
+
+        return View::make('testapi')->with('app_list', $app_list)->with('list', 1);
     }
-    function appDetails($apiname,$id) {
-         
+
+    function appDetails($apiname, $id) {
+
+
+        //$app_list = file_get_contents('http://localhost/test-RNDA/api/' . $apiname . '/' . $id);
+        $url='http://localhost/test-RNDA/api/' . $apiname . '/' . $id;
+        $ch = curl_init();
        
-        $app_list = file_get_contents('http://localhost/test-RNDA/api/'.$apiname.'/'.$id);
-        $app_list = json_decode($app_list, true);
-         print_r($app_list);
-         die('test');
-        return View::make('testapi')->with('app_list',$app_list)->with('list',1);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+        
+        $app_list = curl_exec($ch);
+        
+        $content=curl_close($ch);
+         
+        
+        $app_list = json_decode($app_list);
+        
+
+        return View::make('testapi')->with('app_list', $app_list)->with('list', 0);
     }
 
 }
