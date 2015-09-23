@@ -33,7 +33,7 @@ else // else take the app list
     <ul>
     <?php foreach ($app_list as $app): ?>
       <li>
-        <a href=<?php echo "http://localhost/public/appdetails/get_app/".$app["id"]  ?> alt=<?php echo "app_" . $app["id"] ?>><?php echo $app["name"] ?></a>
+        <a href=<?php echo url()."/appdetails/get_app/".$app["id"]  ?> alt=<?php echo "app_" . $app["id"] ?>><?php echo $app["name"] ?></a>
     </li>
     <?php endforeach; ?>
     </ul>
