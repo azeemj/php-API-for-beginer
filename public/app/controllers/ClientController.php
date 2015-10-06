@@ -26,22 +26,22 @@ class ClientController extends BaseController {
 
 
         //$app_list = file_get_contents('http://localhost/test-RNDA/api/' . $apiname . '/' . $id);
-        $url='https://esolutionap-azeemj.rhcloud.com/api/' . $apiname . '/' . $id;
-      //  $url=url().'/api/' . $apiname . '/' . $id;
+        $url='http://esolutionap-azeemj.rhcloud.com/api/'.$apiname .'/'.$id;
+     //   $url=url().'/api/' . $apiname . '/' . $id;
         $ch = curl_init();
        
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
         curl_setopt($ch, CURLOPT_TIMEOUT, '3');
         
         $app_list = curl_exec($ch);
         
-        $content=curl_close($ch);
+        curl_close($ch);
          
-        
+        echo $app_list;
         $app_list = json_decode($app_list);
-        
-
+        print_r($app_list);
+        die;
         return View::make('testapi')->with('app_list', $app_list)->with('list', 0);
     }
 
