@@ -14,7 +14,7 @@ class ClientController extends BaseController {
 
     function appList() {
 
-        $app_list = file_get_contents('http://localhost/test-RNDA/api/get_app_list/0');
+        $app_list = file_get_contents('https://esolutionap-azeemj.rhcloud.com/api/get_app_list/0');
 
         $app_list = json_decode($app_list, true);
 
@@ -25,7 +25,7 @@ class ClientController extends BaseController {
 
 
         //$app_list = file_get_contents('http://localhost/test-RNDA/api/' . $apiname . '/' . $id);
-        $url='http://localhost/test-RNDA/api/' . $apiname . '/' . $id;
+        $url='https://esolutionap-azeemj.rhcloud.com/api/' . $apiname . '/' . $id;
         $ch = curl_init();
        
         curl_setopt($ch, CURLOPT_URL, $url);
