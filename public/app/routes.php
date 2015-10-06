@@ -15,7 +15,9 @@ Route::get('test', 'HomeController@test');
 Route::get('api/{var1}/{var2}', 'UserController@api');
 Route::get('applist', 'ClientController@appList');
 Route::get('appdetails/{id}/{id2}', 'ClientController@appDetails');
-Route::get('/', function()
-{
-	return View::make('index');
-});
+//Route::get('/', function()
+//{
+	//return View::make('index');
+//});
+
+Route::get('/', 'HomeController@showWelcome');

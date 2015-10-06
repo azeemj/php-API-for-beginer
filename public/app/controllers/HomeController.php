@@ -15,12 +15,14 @@ class HomeController extends BaseController {
      */
 
     function __construct() {
-         $server = new soap_server();
-        $server->register("server");
+         //$server = new soap_server();
+        //$server->register("server");
     }
 
     public function showWelcome() {
-        return View::make('hello');
+        
+        $data['body'] = View::make('home');
+        return View::make('index' , $data);
     }
 
     function test() {
