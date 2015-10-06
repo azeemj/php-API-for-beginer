@@ -17,5 +17,5 @@ Route::get('applist', 'ClientController@appList');
 Route::get('appdetails/{id}/{id2}', 'ClientController@appDetails');
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
 });
