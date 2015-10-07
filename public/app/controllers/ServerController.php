@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class UserController extends BaseController {
+class ServerController extends BaseController {
     
     
     function __construct() {
@@ -21,8 +21,9 @@ class UserController extends BaseController {
 
 
 function api($action,$id=0){
-    
-    $possible_url = array("get_app_list", "get_app");
+   
+    $possible_url = array("get_app_list", "get_app","studentserver");
+   // die("test");
     $value = "An error has occurred";
 if ( in_array($action, $possible_url))
 {
@@ -40,6 +41,13 @@ if ( in_array($action, $possible_url))
         else
           $value = "Missing argument";
         break;
+        
+      case "studentserver":
+          //
+          //echo "test";
+        //  print_r($data);
+          $value = array("app_name" => "Music Sleep Timer", "app_price" => "Free", "app_version" => "1.9");
+          break;
     }
     
     echo (json_encode($value));
@@ -48,6 +56,13 @@ if ( in_array($action, $possible_url))
 
 //return JSON array
 
+}
+
+function testapi(){
+    $data=Input::get();
+    print_r($data);
+   $value = array("app_name" => "Music Sleep Timer", "app_price" => "Free", "app_version" => "1.9");
+    echo (json_encode($value));
 }
     
 }

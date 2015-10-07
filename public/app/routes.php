@@ -12,12 +12,17 @@
 */
 Route::get('server', 'HomeController@getProd');
 Route::get('test', 'HomeController@test');
-Route::get('api/{var1}/{var2}', 'UserController@api');
+Route::get('api/{var1}/{var2}', 'ServerController@api');
 Route::get('applist', 'ClientController@appList');
 Route::get('appdetails/{id}/{id2}', 'ClientController@appDetails');
+Route::post('addstudent', 'ClientController@postStudentData');
 //Route::get('/', function()
 //{
 	//return View::make('index');
 //});
 
 Route::get('/', 'HomeController@showWelcome');
+Route::get('addstudent', 'HomeController@showWelcome');
+
+Route::post('testapi', 'ServerController@testapi');
+

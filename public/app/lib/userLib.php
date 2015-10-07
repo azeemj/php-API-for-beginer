@@ -49,4 +49,10 @@ static function get_app_list()
 }
 
 
+static function addStudent($data){
+    
+    
+    
+}
+
 }
