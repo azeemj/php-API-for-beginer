@@ -51,8 +51,25 @@ static function get_app_list()
 
 static function addStudent($data){
     
+        $user = new User;
+        $user->fname =$data['fname'];
+        $user->lname =$data['lname'];
+        $user->email =$data['email'];
+        $user->address =$data['address'];
+        $user->save();
+        
+        return $insertedId = $user->id;
     
+}
+
+static function listStudents(){
     
+   $list=User::all()->toArray(); 
+  // $list=User::take(300)->skip(0)->get();
+   // $list=User::paginate(30);
+ // echo  $list->links();
+ //print_r($list);
+   return $list;
 }
 
 }

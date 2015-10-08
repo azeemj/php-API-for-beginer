@@ -33,7 +33,7 @@
                                             
                                             <div class="form-group">
                                                 <label for="Address">Address</label>
-                                                <textarea id="Address" name="Address"  name="data[address]" class="form-control" placeholder="Address"></textarea>
+                                                <textarea id="Address"  name="data[address]" class="form-control" placeholder="Address"></textarea>
                                                 
                                             </div>
                                             
@@ -49,7 +49,34 @@
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledBy="profile-tab">
-
+                                <br>
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                  <th>Created</th>
+                    <th>Updated</th>
+               
+            </tr>
+        </thead>
+ 
+        <tbody>
+            
+            @foreach($list as $list_val)
+            <tr>
+                <td>{{$list_val['fname']}}</td>
+                <td>{{$list_val['lname']}}</td>
+                <td>{{$list_val['email']}}</td>
+                <td>{{$list_val['updated_at']}}</td>
+                <td>{{$list_val['created_at']}}</td>
+                
+            </tr>
+            @endforeach
+            
+        </tbody>
+    </table>
 
                             </div>
 

@@ -77,11 +77,16 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $server_output = curl_exec ($ch);
 echo $server_output;
 curl_close ($ch);
-die('one');
+print_r($server_output);
+$arr =  json_decode($server_output);
 
+ Session::set('message',$arr->message) ;
+  Session::set('flag',$arr->flag) ;
 //print_r($data);die;
-
+return Redirect::to('/');
 }
+
+
 
     
 }

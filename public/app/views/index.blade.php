@@ -13,7 +13,7 @@
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
 
 
 
@@ -24,6 +24,20 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+    @if(Session::has('message'))
+
+    @if(Session::get('flag')==1)
+    <div class="alert alert-success">
+        <h2>{{ Session::get('message') }}</h2>
+    </div>
+    @else
+
+    <div class="alert alert-warning">
+        <h2>{{ Session::get('message') }}</h2>
+    </div>
+    @endif
+    @endif
+
     <body>
 
         <div class="container">
@@ -35,5 +49,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+        <script>
+$(document).ready(function () {
+    $('#example').DataTable();
+});
+        </script>
     </body>
 </html>

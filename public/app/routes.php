@@ -25,4 +25,5 @@ Route::get('/', 'HomeController@showWelcome');
 Route::get('addstudent', 'HomeController@showWelcome');
 
 Route::post('testapi', 'ServerController@testapi');
+Route::get('liststudent', 'ServerController@listStduents');
 
