@@ -26,4 +26,5 @@ Route::get('addstudent', 'HomeController@showWelcome');
 
 Route::post('testapi', 'ServerController@testapi');
 Route::get('liststudent', 'ServerController@listStduents');
-
+Route::get('listst', 'ClientController@getStList');
+Route::post('postst', 'ClientController@postSt');

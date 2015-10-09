@@ -26,10 +26,10 @@ class HomeController extends BaseController {
         
         $list= clientLib::getStudentList();
         
-        echo "cc";
+       // echo "cc";
        
-       print_r($list);
-       $data['body'] = View::make('home')->with("list",$list);
+       //print_r($list);
+       $data['body'] = View::make('home')->with("list",$list)->with("url","addstudent");
        return View::make('index' , $data);
     }
 

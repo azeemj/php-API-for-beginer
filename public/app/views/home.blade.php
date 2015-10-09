@@ -13,7 +13,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                        
-                                            {{ Form::open(array('url' => 'addstudent', 'method' => 'post')) }}
+                                            {{ Form::open(array('url' => $url, 'method' => 'post')) }}
                                             
                                             <div class="form-group">
                                                 <label for="FirstName">First Name</label>
