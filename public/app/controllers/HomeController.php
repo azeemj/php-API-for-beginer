@@ -33,6 +33,20 @@ class HomeController extends BaseController {
        return View::make('index' , $data);
     }
 
+    function Twoco(){
+        
+        return View::make('cart_test' );
+    }
+
+    
+     
+    function return_co(){
+        
+        print_r($_POST);
+         print_r($_GET);
+        
+        
+    }
     
     
 
