@@ -33,3 +33,4 @@ Route::post('postst', 'ClientController@postSt');
 Route::get('co', 'HomeController@Twoco');
 
 Route::get('returnco', 'HomeController@return_co');
+Route::get('paypal', 'HomeController@paypal');
