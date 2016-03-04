@@ -28,3 +28,8 @@ Route::post('testapi', 'ServerController@testapi');
 Route::get('liststudent', 'ServerController@listStduents');
 Route::get('listst', 'ClientController@getStList');
 Route::post('postst', 'ClientController@postSt');
+
+
+Route::get('co', 'HomeController@Twoco');
+
+Route::get('returnco', 'HomeController@return_co');
